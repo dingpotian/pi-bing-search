@@ -11,6 +11,10 @@ pnpm-debug.log*
 playwright-report/
 test-results/
 
+# Build / pack artifacts
+dist/
+*.tgz
+
 # OS / editor
 .DS_Store
 Thumbs.db
