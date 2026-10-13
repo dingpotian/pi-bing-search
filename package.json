@@ -15,12 +15,17 @@
   ],
   "author": "dingpotian",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingpotian/pi-bing-search.git"
+  },
   "engines": {
     "node": ">=20"
   },
   "files": [
     "index.ts",
     "README.md",
+    "README.en.md",
     "LICENSE"
   ],
   "pi": {

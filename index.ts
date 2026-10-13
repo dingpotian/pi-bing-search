@@ -9,9 +9,9 @@
  *
  * Browser lifecycle: one reused browser + context (cookies accumulate), all
  * operations serialized by a mutex (a single browser is never driven
- * concurrently). After each search the idle timer resets; after
- * PI_BING_IDLE_CLOSE_MS of no use the browser closes to free memory and lazily
- * relaunches on the next search.
+ * concurrently). After each search the idle timer resets; after 3 minutes of
+ * no use the browser closes to free memory and lazily relaunches on the next
+ * search.
  */
 
 import { chromium, type Browser, type BrowserContext, type Page } from "playwright";
