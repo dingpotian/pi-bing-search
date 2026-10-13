@@ -162,12 +162,14 @@ async function extractPage(page: Page): Promise<BingHit[]> {
 }
 
 // ── Search flow ──────────────────────────────────────────────────────────────
-interface SearchResult {
+// Note: `type` (not `interface`) so the object literal type gets an implicit
+// index signature and satisfies `JsonValue` in `structuredContent`.
+type SearchResult = {
   title: string;
   url: string;
   description: string;
   position: number;
-}
+};
 
 async function bingSearch(query: string, limit: number): Promise<SearchResult[]> {
   const { context: ctx } = await ensureBrowser();
