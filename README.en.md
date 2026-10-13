@@ -36,13 +36,13 @@ Then run `/reload` in Pi (or restart) so the extension registers.
 
 ### Browser binary
 
-The extension pins `playwright@1.62.1` (Chromium revision 1234 / Chrome 151). The browser binary is **not** downloaded by `npm install` — each user must fetch it once:
+The extension depends on `playwright` (any installed version). The browser binary is **not** downloaded by `npm install` — each user must fetch it once:
 
 ```bash
 npx playwright install chromium
 ```
 
-If your machine already has `chromium-1234` in the Playwright cache (`~/AppData/Local/ms-playwright/` on Windows, `~/.cache/ms-playwright/` on Linux/macOS), this step completes instantly with no network access.
+Playwright downloads the Chromium that matches the installed version (cached at `~/AppData/Local/ms-playwright/` on Windows, `~/.cache/ms-playwright/` on Linux/macOS); if a matching version is already cached, this step completes instantly with no network access.
 
 ## Tools
 
@@ -99,8 +99,8 @@ Everything else is a fixed, conservative code constant in `index.ts`:
 
 ## Requirements
 
-- **Node >= 20** (playwright 1.62.1's minimum).
-- **Chromium** in the Playwright cache (`npx playwright install chromium`), or a previously cached `chromium-1234`.
+- **Node >= 20** (playwright's minimum).
+- **Chromium** in the Playwright cache (`npx playwright install chromium` fetches the matching version).
 
 ## Uninstall
 

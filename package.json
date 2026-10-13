@@ -35,7 +35,7 @@
     "typecheck": "tsc --noEmit --pretty false"
   },
   "dependencies": {
-    "playwright": "1.62.1"
+    "playwright": "*"
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",

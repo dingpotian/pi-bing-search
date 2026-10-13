@@ -36,13 +36,13 @@ pi install ./pi-bing-search
 
 ### 浏览器二进制
 
-扩展固定 `playwright@1.62.1`（Chromium revision 1234 / Chrome 151）。浏览器二进制**不会**随 `npm install` 下载——每位用户需要单独跑一次：
+扩展依赖 `playwright`（不指定版本，任意已安装版本均可）。浏览器二进制**不会**随 `npm install` 下载——每位用户需要单独跑一次：
 
 ```bash
 npx playwright install chromium
 ```
 
-如果你的机器已经在 Playwright 缓存里有 `chromium-1234`（Windows 在 `~/AppData/Local/ms-playwright/`，Linux/macOS 在 `~/.cache/ms-playwright/`），这一步无需联网、秒过。
+Playwright 会自动下载与当前安装版本匹配的 Chromium（Windows 缓存于 `~/AppData/Local/ms-playwright/`，Linux/macOS 在 `~/.cache/ms-playwright/`）；若已缓存过对应版本则无需联网、秒过。
 
 ## 工具
 
@@ -99,8 +99,8 @@ npx playwright install chromium
 
 ## 要求
 
-- **Node >= 20**（playwright 1.62.1 的最低要求）。
-- **Chromium** 在 Playwright 缓存中（`npx playwright install chromium`），或已缓存 `chromium-1234`。
+- **Node >= 20**（playwright 的最低要求）。
+- **Chromium** 在 Playwright 缓存中（`npx playwright install chromium` 下载对应版本）。
 
 ## 卸载
 
