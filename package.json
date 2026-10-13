@@ -1,0 +1,17 @@
+{
+  "name": "pi-bing-search",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Pi extension: Bing web search via a real Chromium browser (Playwright)",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./index.ts"]
+  },
+  "dependencies": {
+    "playwright": "1.62.1"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-ai": "*",
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
